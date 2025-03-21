@@ -43,7 +43,7 @@ export default function Home() {
         {/* Background image without gradient overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/images/Roadmap-5.jpg"
+            src="/images/Roadmap-5.webp"
             alt="Financial Chart Background"
             fill
             className="object-cover object-center"

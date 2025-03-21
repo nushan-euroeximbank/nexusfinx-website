@@ -20,7 +20,7 @@ export default function AboutPage() {
         {/* Background image without gradient overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/images/about_bg.jpg"
+            src="/images/about_bg.webp"
             alt="Financial Chart Background"
             fill
             className="object-cover object-center"
