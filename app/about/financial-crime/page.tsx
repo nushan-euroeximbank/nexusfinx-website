@@ -4,23 +4,24 @@ export default function FinancialCrimePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#001a33] to-[#002E5B] text-white py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Financial Crime Prevention</h1>
-            <p className="text-xl mb-8">Our commitment to preventing financial crime and ensuring compliance</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/financial-chart.jpeg"
-            alt="Financial Chart Background"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-      </section>
+      <section className="relative text-white py-20 md:py-32">
+  <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <div className="max-w-3xl">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">Financial Crime Prevention</h1>
+      <p className="text-xl mb-8">Our commitment to preventing financial crime and ensuring compliance</p>
+    </div>
+  </div>
+  {/* Background image without gradient overlay */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/f.jpg"
+      alt="Financial Chart Background"
+      fill
+      className="object-cover object-center"
+      priority
+    />
+  </div>
+</section>
 
       {/* Content Section */}
       <section className="py-16 md:py-24 bg-white">

@@ -1,33 +1,103 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, ArrowRight } from "lucide-react"
 
 export default function OffshoreCompanyFormationPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#001a33] to-[#002E5B] text-white py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Offshore Company Formation</h1>
-            <p className="text-xl mb-8 animate-fadeIn animation-delay-200">
-              Establish your business in Anjouan with our comprehensive company formation services
+      <section className="relative text-white py-20 md:py-32">
+  <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <div className="max-w-3xl">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Offshore Company Formation Anjouan</h1>
+      <p className="text-xl mb-8 animate-fadeIn animation-delay-200">
+        Establish your business in Anjouan with our comprehensive company formation services
+      </p>
+    </div>
+  </div>
+  {/* Background image without gradient overlay */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/ar.jpg"
+      alt="Financial Chart Background"
+      fill
+      className="object-cover object-center"
+      priority
+    />
+  </div>
+</section>
+
+      {/* Introduction */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#002E5B]">
+              Offshore Company Formation in Anjouan
+            </h2>
+            <p className="text-gray-700 text-lg mb-6">
+              Setting up an offshore company in Anjouan offers businesses and entrepreneurs a strategic advantage in
+              terms of taxation, asset protection, and operational flexibility. Whether you are looking to expand
+              globally, protect your wealth, or optimize your financial structure, Anjouan provides a secure and
+              business-friendly environment.
             </p>
           </div>
         </div>
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/financial-chart.jpeg"
-            alt="Financial Chart Background"
-            fill
-            className="object-cover object-center"
-            priority
-          />
+      </section>
+
+      {/* Section 1: Key Benefits */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12 animate-fadeIn">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#002E5B]">Key Benefits</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Discover the advantages of establishing your offshore company in Anjouan
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Tax Efficiency",
+                description: "Enjoy minimal or zero corporate taxation, depending on your business structure.",
+              },
+              {
+                title: "Confidentiality",
+                description:
+                  "Business owners benefit from strict privacy regulations protecting shareholder and director information.",
+              },
+              {
+                title: "Asset Protection",
+                description:
+                  "Offshore incorporation helps shield your assets from legal claims and economic instability.",
+              },
+              {
+                title: "Ease of Incorporation",
+                description: "Quick and hassle-free company registration process with minimal bureaucratic hurdles.",
+              },
+              {
+                title: "Global Business Opportunities",
+                description:
+                  "Conduct international business operations with greater flexibility and fewer restrictions.",
+              },
+            ].map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl transform hover:-translate-y-2 animate-fadeIn"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <CheckCircle className="text-yellow-500 mt-1 flex-shrink-0" />
+                  <h3 className="font-bold text-xl text-[#002E5B]">{benefit.title}</h3>
+                </div>
+                <p className="text-gray-700 ml-9">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Section 2: Why Form an Offshore Company */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -87,7 +157,7 @@ export default function OffshoreCompanyFormationPage() {
             </div>
             <div className="animate-slideInRight">
               <Image
-                src="/placeholder.svg"
+                src="/as01.jpg"
                 alt="Offshore Company Formation"
                 width={600}
                 height={400}
@@ -98,8 +168,78 @@ export default function OffshoreCompanyFormationPage() {
         </div>
       </section>
 
-      {/* Our Process */}
+      {/* Section 3: Our Services */}
       <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12 animate-fadeIn">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#002E5B]">Our Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Comprehensive offshore company formation services tailored to your needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Company name registration and incorporation",
+                description:
+                  "We handle the entire process of registering your company name and completing the incorporation process in Anjouan.",
+              },
+              {
+                title: "Registered office and agent services",
+                description:
+                  "We provide a registered office address and agent services to meet local requirements and maintain your company's good standing.",
+              },
+              {
+                title: "Corporate bank account setup assistance",
+                description:
+                  "We assist you in setting up corporate bank accounts with reputable financial institutions to support your business operations.",
+              },
+              {
+                title: "Compliance and legal advisory",
+                description:
+                  "Our experts provide guidance on compliance matters and legal requirements to ensure your offshore company operates within regulatory frameworks.",
+              },
+              {
+                title: "Annual maintenance and reporting",
+                description:
+                  "We handle annual maintenance tasks and reporting requirements to keep your offshore company in good standing with local authorities.",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl transform hover:-translate-y-2 animate-fadeIn"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <ArrowRight className="text-yellow-500 mt-1 flex-shrink-0" />
+                  <h3 className="font-bold text-lg text-[#002E5B]">{service.title}</h3>
+                </div>
+                <p className="text-gray-700 ml-9">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="max-w-3xl mx-auto mt-12 text-center">
+            <p className="text-gray-700 mb-8 text-lg">
+              Let us help you establish a strong offshore presence in Anjouan with a tailored solution that aligns with
+              your business objectives.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#002E5B] transition-transform duration-300 hover:scale-105 hover:bg-[#002E5B]"
+            >
+              <Link href="https://secure.nexusinternationalfinanceltd.com/register_business.php?visitor_language=english">
+                Start Your Company Formation
+              </Link>
+            </Button>
+          </div> */}
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 animate-fadeIn">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#002E5B]">Our Company Formation Process</h2>
@@ -149,7 +289,7 @@ export default function OffshoreCompanyFormationPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center animate-fadeIn">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#002E5B]">Ready to Form Your Offshore Company?</h2>
           <p className="text-gray-700 mb-8">
