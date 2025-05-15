@@ -33,8 +33,7 @@ export default function OffshoreCompanyFormationPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#002E5B]">
-              Offshore Company Formation in Anjouan
-            </h2>
+            setting up your offshore company is a breeze            </h2>
             <p className="text-gray-700 text-lg mb-6">
               Setting up an offshore company in Anjouan offers businesses and entrepreneurs a strategic advantage in
               terms of taxation, asset protection, and operational flexibility. Whether you are looking to expand

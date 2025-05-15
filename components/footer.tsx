@@ -73,7 +73,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-300">Copyright ©{new Date().getFullYear()} All rights reserved</p>
+          <p className="text-sm text-gray-300">
+            Copyright ©{new Date().getFullYear()} All rights reserved |{" "}
+            <Link href="/privacy-policy" className="underline hover:text-yellow-400 transition-colors">
+              Privacy Policy
+            </Link>
+          </p>
           <button
             onClick={scrollToTop}
             className="mt-4 md:mt-0 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
@@ -86,4 +91,3 @@ export default function Footer() {
     </footer>
   )
 }
-
