@@ -134,11 +134,13 @@ export default function Home() {
                 Get In Touch with Us Anytime!
               </h2>
               <p className="text-gray-600">
-                Have questions about our services? We're here to help.
+                Have questions about our services? We\'re here to help.
               </p>
             </div>
 
-            <form className="space-y-6 animate-fadeIn animation-delay-200">
+            <form className="space-y-6 animate-fadeIn animation-delay-200" action="https://submit-form.com/Y8Kgd8Hfs" method="POST">
+              <input type="hidden" name="_redirect" value="https://nexusfinx.com/thanks" />
+              <input type="hidden" name="_append" value="false" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
@@ -146,6 +148,7 @@ export default function Home() {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     placeholder="Enter your name"
                     required
                     className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
@@ -157,6 +160,7 @@ export default function Home() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="Enter your email"
                     required
@@ -170,6 +174,7 @@ export default function Home() {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="How can we help you?"
                   rows={5}
                   required
