@@ -3,8 +3,12 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
+import ContactForm from "@/components/contact-form"
 
 export default function ContactPage() {
+  const FORMSPARK_URL = "https://submit-form.com/Y8Kgd8Hfs"
+  const RECAPTCHA_SITE_KEY = "6Lc4yEArAAAAAH2DAeThsSiBeIAk4sLVDLtcbtj0"
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -39,68 +43,13 @@ export default function ContactPage() {
                 Fill out the form below and our team will get back to you as soon as possible.
               </p>
 
-              <form className="space-y-6" action="https://submit-form.com/Y8Kgd8Hfs" method="POST">
-                <input type="hidden" name="_redirect" value="https://nexusfinx.com/thanks" />
-                <input type="hidden" name="_append" value="false" />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Full Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                      required
-                      className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email Address
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      required
-                      className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="What is this regarding?"
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="How can we help you?"
-                    rows={5}
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-[#002E5B] transition-transform duration-300 hover:scale-105 hover:bg-[#002E5B]"
-                >
-                  Send Message
-                </Button>
-              </form>
+              <ContactForm
+                formsparkUrl={FORMSPARK_URL}
+                recaptchaSiteKey={RECAPTCHA_SITE_KEY}
+                showSubject={true}
+                formClassName="space-y-6"
+              />
+
             </div>
 
             {/* Contact Information */}

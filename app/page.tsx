@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
+  const FORMSPARK_URL = "https://submit-form.com/Y8Kgd8Hfs";
+  const RECAPTCHA_SITE_KEY = "6Lc4yEArAAAAAH2DAeThsSiBeIAk4sLVDLtcbtj0";
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - 100% height */}
@@ -138,56 +142,14 @@ export default function Home() {
               </p>
             </div>
 
-            <form className="space-y-6 animate-fadeIn animation-delay-200" action="https://submit-form.com/Y8Kgd8Hfs" method="POST">
-              <input type="hidden" name="_redirect" value="https://nexusfinx.com/thanks" />
-              <input type="hidden" name="_append" value="false" />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="How can we help you?"
-                  rows={5}
-                  required
-                  className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-[#002E5B] transition-transform duration-300 hover:scale-105 hover:bg-[#002E5B]"
-              >
-                Send Message
-              </Button>
-            </form>
+            <div className="animate-fadeIn animation-delay-200">
+              <ContactForm 
+                formsparkUrl={FORMSPARK_URL}
+                recaptchaSiteKey={RECAPTCHA_SITE_KEY}
+                showSubject={false}
+                formClassName="space-y-6"
+              />
+            </div>
           </div>
         </div>
       </section>
