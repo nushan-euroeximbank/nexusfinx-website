@@ -77,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 animate-fadeIn">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#002E5B]">
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Links to Other Pages */}
       <section className="py-16 md:py-24 bg-white">
