@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
+  const FORMSPARK_URL = "https://submit-form.com/Y8Kgd8Hfs";
+  const RECAPTCHA_SITE_KEY = "6Lc4yEArAAAAAH2DAeThsSiBeIAk4sLVDLtcbtj0";
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - 100% height */}
@@ -134,55 +138,18 @@ export default function Home() {
                 Get In Touch with Us Anytime!
               </h2>
               <p className="text-gray-600">
-                Have questions about our services? We're here to help.
+                Have questions about our services? We\'re here to help.
               </p>
             </div>
 
-            <form className="space-y-6 animate-fadeIn animation-delay-200">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                    className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="How can we help you?"
-                  rows={5}
-                  required
-                  className="transition-all duration-300 focus:border-[#002E5B] focus:ring-[#002E5B]"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-[#002E5B] transition-transform duration-300 hover:scale-105 hover:bg-[#002E5B]"
-              >
-                Send Message
-              </Button>
-            </form>
+            <div className="animate-fadeIn animation-delay-200">
+              <ContactForm 
+                formsparkUrl={FORMSPARK_URL}
+                recaptchaSiteKey={RECAPTCHA_SITE_KEY}
+                showSubject={false}
+                formClassName="space-y-6"
+              />
+            </div>
           </div>
         </div>
       </section>
